@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+<head>
+  <meta charset="utf-8">
+  <script>
+    // GitHub Pages 404.html 回退方案
+    // 将路径中的 /Fifty_assistant 前缀正确处理
+    var path = window.location.pathname;
+    var segment = path.replace(/^\/Fifty_assistant\/404\.html/, '');
+    // 将路径参数附加到 index.html 进行重定向
+    window.location.replace(
+      '/Fifty_assistant/' +
+      (segment ? '#' + segment : '')
+    );
+  </script>
+</head>
+<body></body>
+</html>

@@ -66,7 +66,9 @@ function mergeDeep(target, source) {
     if (source[key] && typeof source[key] === "object" && !Array.isArray(source[key])) {
       if (!target[key] || typeof target[key] !== "object") target[key] = {};
       mergeDeep(target[key], source[key]);
-    } else { target[key] = source[key]; }
+    } else {
+      target[key] = source[key];
+    }
   }
   return target;
 }
@@ -81,9 +83,27 @@ if (persisted) {
     const ls = localStorage.getItem("setting");
     const sl = localStorage.getItem("selectedOn");
     const sr = localStorage.getItem("studyRecord");
-    if (ls) { try { mergeDeep(initialState.setting, JSON.parse(ls)); } catch (e) {} }
-    if (sl) { try { mergeDeep(initialState.selectedOn, JSON.parse(sl)); } catch (e) {} }
-    if (sr) { try { mergeDeep(initialState.studyRecord, JSON.parse(sr)); } catch (e) {} }
+    if (ls) {
+      try {
+        mergeDeep(initialState.setting, JSON.parse(ls));
+      } catch (e) {
+        /* ignore parse error */
+      }
+    }
+    if (sl) {
+      try {
+        mergeDeep(initialState.selectedOn, JSON.parse(sl));
+      } catch (e) {
+        /* ignore parse error */
+      }
+    }
+    if (sr) {
+      try {
+        mergeDeep(initialState.studyRecord, JSON.parse(sr));
+      } catch (e) {
+        /* ignore parse error */
+      }
+    }
   }
   if (!initialState.appMeta.installDate) initialState.appMeta.installDate = todayKey();
 }

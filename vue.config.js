@@ -1,4 +1,11 @@
 module.exports = {
+  lintOnSave: false,
+
+  chainWebpack: config => {
+    config.module.rules.delete('eslint');
+    config.plugins.delete('eslint');
+  },
+
   publicPath: process.env.NODE_ENV === 'production'
     ? '/Fifty_assistant/'
     : '/',

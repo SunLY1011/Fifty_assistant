@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Fifty_assistant/docs/precache-manifest.311fa7cfb151a46dda0b5bdedd15a45a.js"
+  "/Fifty_assistant/docs/precache-manifest.5185147672c93f263a63a8a50eb91bdd.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gojuuon_helper"});

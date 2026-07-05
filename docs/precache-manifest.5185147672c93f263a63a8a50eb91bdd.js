@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fecc74ae09a0d9b2df9570a9e26044b9",
+    "revision": "71ffecd9b8d3544137f71fceb81392d4",
     "url": "/Fifty_assistant/docs/404.html"
   },
   {
@@ -260,7 +260,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Fifty_assistant/docs/manifest.json"
   },
   {
-    "revision": "8e3d7c5d0ca2290a0ebde24eb61b84f3",
+    "revision": "61ff5579f5b223506f29c26ddf90d0e5",
     "url": "/Fifty_assistant/docs/mdui.css"
   },
   {

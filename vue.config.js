@@ -7,7 +7,7 @@ module.exports = {
   },
 
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/Fifty_assistant/'
+    ? '/Fifty_assistant/docs/'
     : '/',
 
   pwa: {
@@ -24,7 +24,7 @@ module.exports = {
       name: '五十音助手',
       short_name: '五十音',
       description: '日语五十音与单词学习助手',
-      start_url: '/Fifty_assistant/index.html',
+      start_url: '/Fifty_assistant/docs/index.html',
       display: 'standalone',
       orientation: 'portrait',
       background_color: '#ffffff',
@@ -32,12 +32,12 @@ module.exports = {
       lang: 'zh-Hans-CN',
       icons: [
         {
-          src: '/Fifty_assistant/img/icons/android-chrome-192x192.png',
+          src: '/Fifty_assistant/docs/img/icons/android-chrome-192x192.png',
           sizes: '192x192',
           type: 'image/png'
         },
         {
-          src: '/Fifty_assistant/img/icons/android-chrome-512x512.png',
+          src: '/Fifty_assistant/docs/img/icons/android-chrome-512x512.png',
           sizes: '512x512',
           type: 'image/png'
         }
@@ -47,26 +47,26 @@ module.exports = {
           name: "快速练习",
           short_name: "练习",
           description: "直接开始五十音练习",
-          url: "/Fifty_assistant/index.html#/practise"
+          url: "/Fifty_assistant/docs/index.html#/practise"
         },
         {
           name: "错题回顾",
           short_name: "错题",
           description: "查看容易出错的假名",
-          url: "/Fifty_assistant/index.html#/practise/review"
+          url: "/Fifty_assistant/docs/index.html#/practise/review"
         },
         {
           name: "五十音表",
           short_name: "音表",
           description: "查看完整五十音表",
-          url: "/Fifty_assistant/index.html#/table"
+          url: "/Fifty_assistant/docs/index.html#/table"
         }
       ]
     },
 
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
-      navigateFallback: '/Fifty_assistant/index.html',
+      navigateFallback: '/Fifty_assistant/docs/index.html',
       runtimeCaching: [
         {
           urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,

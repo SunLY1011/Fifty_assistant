@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Fifty_assistant/precache-manifest.e1a5f397850544a16337d5c1a9e37115.js"
+  "/Fifty_assistant/docs/precache-manifest.311fa7cfb151a46dda0b5bdedd15a45a.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "gojuuon_helper"});
@@ -33,7 +33,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/Fifty_assistant/index.html"));
+workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/Fifty_assistant/docs/index.html"));
 
 workbox.routing.registerRoute(/\.(?:png|jpg|jpeg|svg|gif)$/, new workbox.strategies.CacheFirst({ "cacheName":"gojuuon-images", plugins: [new workbox.expiration.Plugin({ maxEntries: 100, maxAgeSeconds: 2592000, purgeOnQuotaError: false })] }), 'GET');
 workbox.routing.registerRoute(/\.(?:m4a|mp3|wav)$/, new workbox.strategies.CacheFirst({ "cacheName":"gojuuon-audio", plugins: [new workbox.expiration.Plugin({ maxEntries: 50, maxAgeSeconds: 5184000, purgeOnQuotaError: false })] }), 'GET');
